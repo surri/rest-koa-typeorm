@@ -1,0 +1,27 @@
+{
+  "name": "hotpler-server",
+  "version": "1.0.0",
+  "description": "hotpler server",
+  "main": "./src/server.ts",
+  "author": "surri <thekeh@hotmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=development ts-node-dev ./src/server.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "@types/koa": "^2.13.4",
+    "@types/koa-json": "^2.0.20",
+    "@types/koa-logger": "^3.1.2",
+    "@types/koa-router": "^7.4.4",
+    "koa": "^2.13.4",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^10.1.1"
+  }
+}
