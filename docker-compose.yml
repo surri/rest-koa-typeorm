@@ -5,7 +5,7 @@ services:
     image: postgres:14.1
     restart: always
     volumes:
-      - ./postgres:/var/lib/postgresql/data
+      - ./postgres/data:/var/lib/postgresql/data
       - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - 45432:5432
@@ -23,7 +23,7 @@ services:
     ports:
       - "46379:6379"
     volumes:
-      - ./redis:/data
+      - ./redis/data:/data
     mem_limit: 96m
     networks:
       - postgres-network

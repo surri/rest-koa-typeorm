@@ -1,3 +1,4 @@
 node_modules
-postgres
-redis
+postgres/data
+postgres/init.sql
+redis/data
