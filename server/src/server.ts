@@ -1,24 +1,15 @@
-import Koa from 'koa';
-import Router from 'koa-router'
-import logger from 'koa-logger'
+import Koa from 'koa'
+import bodyParser from 'koa-bodyparser'
 import json from 'koa-json'
+import logger from 'koa-logger'
+import routes from './routes'
 
-const app = new Koa();
-const router = new Router();
 
-router.get('/ping', function (ctx, next) {
-    ctx.body = {
-        status: 200,
-        data: {
-            foo: 'bar',
-            ping: 'pong',
-        }
-    }
-    return next();
-});
+const app = new Koa()
 
+app.use(bodyParser());
+app.use(json({ pretty: true }))
 app.use(logger())
-app.use(json({ pretty: true }));
-app.use(router.routes());
+app.use(routes.routes())
 
 app.listen(3000, () => console.log('start server'))
