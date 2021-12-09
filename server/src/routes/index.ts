@@ -10,7 +10,7 @@ routes.get('/ping', (ctx, next) => {
         status: 200,
         data: {
             foo: 'bar',
-            ping: 'pong',
+            ping: 'pfong',
         }
     }
     return next()
